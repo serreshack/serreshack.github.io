@@ -1,1 +1,0 @@
-200px * 200px images, prefer white background and jpg format.
