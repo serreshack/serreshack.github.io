@@ -26,7 +26,7 @@
 
 ### UI - Visualisation (10pt)
 9. Οπτικοποιήστε τον αριθμό των server requests ανά 1 hr σε γράφημα (Requests per Hour) (5pt)
-10. Οπτικοποιήστε το σύνολο των server requests ανά ήπειρο σε γράφημα τύπου πίτα (Total Requests per Continent) (5pt)
+10. Οπτικοποιήστε το σύνολο των server requests ανά χώρα σε γράφημα τύπου πίτα (Total Requests per Continent) (5pt)
 
 ### Bonus (10pt)
 11. Ποια IP κατά την γνώμη σας είναι η πιο επικίνδυνη για τον server; Για ποιο λόγο; (10pt)
