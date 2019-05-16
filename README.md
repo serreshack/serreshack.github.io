@@ -24,7 +24,7 @@ REST API για την διασύνδεση με άλλες υπηρεσίες �
 8. Οπτικοποιήστε όλα τα server requests σε γεωγραφικό χάρτη (επιθέσεις ανά χώρα) (5pt)
 9. Οπτικοποιήστε όλα τα server requests σε γραφήματα σε σχέση με τον χρόνο. (Time VS Parameter) (5pt)
 
-[Server logs for whole day of May 19 2019](daily-logs.zip)
+| Download here: [Server logs for whole day of May 19 2019](https://github.com/serrestech/hackathon/raw/topic/daily-logs.zip)
 
 ## Παράρτημα
 - Apache2, Common Log Format: https://httpd.apache.org/docs/2.4/logs.html
