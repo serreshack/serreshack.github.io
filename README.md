@@ -17,19 +17,24 @@
 2. Πόσα requests προκάλεσαν 5xx server error; (1pt)
 3. Πόσες είναι οι ξεχωριστές IP που επισκέφτηκαν τον server; (3pt)
 
-### Data Mining (15pt)
-4. Ποιο ποσοστό των requests θεωρείτε ότι αποτελούν server attacks; (3pt)
-5. Πόσα **SQL Injections**, **XSS**, και **"Local File Inclusion (lfi)"** attacks αναγνωρίσατε συνολικά; (5pt)
+### Data Mining (20pt)
+4. Ποιο ποσοστό των requests θεωρείτε ότι αποτελούν server attacks; (5pt)
+5. Πόσα **SQL Injections**, **XSS**, και **"Local File Inclusion (lfi)"** attacks αναγνωρίσατε συνολικά; (6pt)
 6. Ποιες 5 σελίδες δέχονται τις περισσότερες επιθέσεις; (2pt)
-7. Από ποια χώρα έρχονται οι περισσότερες επιθέσεις; (3pt)
+7. Από ποια χώρα έρχονται οι περισσότερες επιθέσεις; (5pt)
 8. Ποια ώρα της ημέρας έγιναν οι περισσότερες επιθέσεις; (2pt)
 
-### UI - Visualisation (10pt)
-9. Οπτικοποιήστε τον αριθμό των server requests ανά 1 hr σε γράφημα (Requests per Hour) (5pt)
+### UI - Visualisation (15pt)
+9. Οπτικοποιήστε τον αριθμό των server requests ανά 1 hr σε γράφημα (Requests per Hour) (2pt)
 10. Οπτικοποιήστε το σύνολο των server requests ανά χώρα σε γράφημα τύπου πίτα (Total Requests per Country) (5pt)
+11. Αποτυπώστε την προέλευση των attack requests ανά ώρα σε ένα παγκόσμιο χάρτη (8pt)
 
 ### Bonus (10pt)
-11. Ποια IP κατά την γνώμη σας είναι η πιο επικίνδυνη για τον server; Για ποιο λόγο; (10pt)
+12. Ποια IP κατά την γνώμη σας είναι η πιο επικίνδυνη για τον server; Για ποιο λόγο; (10pt)
+
+### Παρατήρηση
+Οι λύσεις που ανιχνεύουν αλγοριθμικά με γενετικούς αλγορίθμους, clustering ή οποιαδήποτε μέθοδο μηχανικής μάθησης τις επιθέσεις αυτές (και άλλα ήδη) και όχι με στατικούς κανόνες θα έχουν +10pt
+
 
 Δίνονται τα αρχεία καταγραφής: [daily-logs.zip](https://github.com/serrestech/hackathon/raw/topic/daily-logs.zip)
 
