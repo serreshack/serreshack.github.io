@@ -10,11 +10,14 @@
 
 Αν από τα logs αφαιρέσουμε τα requests που δεν έχουν "attack suffix" τότε θα πάρουμε log files μόνο με τα attack requests (βλ. επισύναψη).
 
+---
 
 ## Β. Πως απαντήθηκαν τα ερωτήματα
 
 - Για την απάντηση στα 1 - 3 χρησιμοποιήθηκαν κοινά cli commands.
 - Για τα θέματα Data Mining χρησιμοποιήθηκαν ειδικοί [attack log analyzers](https://github.com/theodorosploumis/apache-log-generator#log-analyzers-for-security-problems) και ιδιαιτέρως το LORG και Scalp. Αυτά τα εργαλεία είναι parsers με patterns που παίρνουν κυρίως από το [PHPIDS](https://en.wikipedia.org/wiki/PHPIDS).
+
+---
 
 ## Γ. Βαθμολογία ομάδων
 
@@ -22,6 +25,7 @@
 
 Η [αναλυτική βαθμολογία των ομάδων βρίσκεται εδώ](https://github.com/serrestech/hackathon/blob/topic/results/team_results_2019.pdf).
 
+----
 
 ## Δ. Απαντήσεις - βαθμοί
 
@@ -61,11 +65,27 @@
 
 Στην κατηγορία αυτή, επίσης, συμμετείχαν και οι χορηγοί.
 
+---
+
+## Ε. Κατάταξη Ομάδων
+
+| Νο | Ομάδα | Pts |
+|----|-------|-----|
+| 1 | Wannabe Programmers | 56 |
+| 2 | Πύθωνες | 55 |
+| 3 | HACKBANG | 36 |
+| 4 | takeover.c | 30 |
+| 5 | Data Miners | 28 |
+| 6 | sec serres 2 | 23 |
+| 7 | Greek Code community | 8 |
+| 8 | SecSerres | 6 |
+
+- Οι ομάδες Heartless, Fear_Of_The_Bug, compubiz, kappa δεν ολοκληρωσαν το hackathon.
 
 
 ---
 
-## Attachments
+## ΣΤ. Attachments
 
 - [Hackathon Team results & Points](https://github.com/serrestech/hackathon/blob/topic/results/team_results_2019.pdf)
 - [list-of-attack-suffixes.txt](https://github.com/serrestech/hackathon/blob/topic/results/list-of-attack-suffixes.txt)
