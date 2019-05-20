@@ -23,7 +23,7 @@
 Η [αναλυτική βαθμολογία των ομάδων βρίσκεται εδώ](https://github.com/serrestech/hackathon/blob/topic/results/team_results_2019.pdf).
 
 
-## Γ. Απαντήσεις
+## Δ. Απαντήσεις - βαθμοί
 
 ### Γενικά (5pt)
 | No | Ερώτηση | Απάντηση |
