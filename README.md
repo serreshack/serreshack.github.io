@@ -1,57 +1,34 @@
-# Serres Hackathon 4.0 - Topic
+# Serres Hackathon 4.0 - After Post
 
-## Επίθεση σε webserver Apache2 - Ανάλυση αρχείων καταγραφής (log files)
+## Ολοκληρώθηκε το 4o Ηackathon Serres 2019
 
-### Περιγραφή
-Μία ΜΚΟ με έδρα την Ελλάδα διατηρεί ένα PHP website με βάση δεδομένων MySQL που
-περιλαμβάνει εκτός των άλλων σύνδεση χρηστών, online πληρωμές (eshop) και ένα
-REST API για την διασύνδεση με άλλες υπηρεσίες και εφαρμογές.
+Με επιτυχία ολοκληρώθηκε το [4o Serres Hackathon](http://hackathon.serrestech.gr)
+ με θέμα «Web Attack Mining» το Σάββατο 18 και την Κυριακή 19 Μαΐου 2018 στο ΤΕΙ Κ.Μ. (Σέρρες) που διοργανώθηκε από την τεχνολογική κοινότητα Σερρών [serrestech.gr](https://www.serrestech.gr) και το [Πρόγραμμα Μεταπτυχιακών Σπουδών στην Εφαρμοσμένη Πληροφορική του Τμήματος Μηχανικών Πληροφορικής](http://informatics.teicm.gr/msc_informatics/) του ΤΕΙ Κεντρικής Μακεδονίας.
 
-Λόγω αμέλειας ο server δέχεται ανεξέλεγκτα επιθέσεις από διάφορα μέρη του πλανήτη. Όλα τα apache access (και error) log requests διατηρούνται στο σύστημα σε αρχεία κατά σειρά με βάση το “Common Log Format, CLF” (βλ. παρακάτω) και με μέγιστο αριθμό 9.000 γραμμών.
+![Οι ομάδες επί τω έργω](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/working1.jpg "Ομάδα επί τω έργω")
 
-Οι επιθέσεις προκαλούν διάφορα ανεπιθύμητα συμβάντα όπως την διακοπή των υπηρεσιών, την καθυστέρηση της απόκρισης των υπηρεσιών καθώς και την προσπάθεια υποκλοπής δεδομένων και κωδικών σύνδεσης.
+10 ομάδες και συνολικά 37 άτομα από το ΤΕΙ Κεντρικής Μακεδονίας, το Αλεξάνδρειο ΤΕΙ Θεσσαλονίκης, το ΠΑΜΑΚ και το Αριστοτελείο Πανεπιστήμιο διαγωνίστηκαν για 34 συνεχείς ώρες υλοποιώντας εφαρμογές ανοιχτού κώδικα οι οποίες σκοπό είχαν [να αναγνωρίσουν και να αναφέρουν επιθέσεις σε μια ιστοσελίδα](https://github.com/serrestech/hackathon/tree/topic). Μάλιστα υπήρχε και διεθνής συμμετοχή με τον Burak Tamturk (Τουρκία).
 
-## Ζητούμενα
-Με βάση τα παραπάνω δεδομένα απαντήστε στις παρακάτω ερωτήσεις ή ολοκληρώστε τις παρακάτω εργασίες:
+Στους νικητές δόθηκαν χρηματικά έπαθλα καθώς και έκπτωση 25% στα δίδακτρα του Πρόγραμμα Μεταπτυχιακών Σπουδών στην Εφαρμοσμένη Πληροφορική. Όλοι οι συμμετέχοντες έλαβαν βεβαίωση συμμετοχής, μετάλλιο και μία αναμνηστική κούπα ενώ όλα τα αποτελέσματα δημοσιεύτηκαν στο [επίσημο website του Hackathon](http://hackathon.serrestech.gr)
 
-### Α. Γενικά (5pt)
-| No | Ερώτηση | Απάντηση |
-|-----| ------- | -------- |
-| 1 | Πόσο ήταν συνολικά το traffic που δέχτηκε ο server; (1pt) | 3708 MB |
-| 2 | Πόσα requests προκάλεσαν 5xx server error; (1pt) | 4729 |
-| 3 | Πόσες είναι οι ξεχωριστές IP που επισκέφτηκαν τον server; (3pt) | 20 |
+![Οι ομάδες](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/teams.jpg "Αναμνηστική φωτογραφία των ομάδων")
 
-### Β. Data Mining (15pt)
-| No | Ερώτηση | Απάντηση |
-|-----| ------- | -------- |
-| 4 | Ποιο ποσοστό των requests θεωρείτε ότι αποτελούν server attacks; (3pt) | 63929 of 86400 = 74 % |
-| 5 | Πόσα SQL Injections, XSS, και "Local File Inclusion (lfi)" attacks αναγνωρίσατε συνολικά; (5pt) | sql (2618) + xss (12728) + lfi (13316) = 28662 |
-| 6 | Ποιες 5 σελίδες δέχονται τις περισσότερες επιθέσεις; (2pt) | `/, /index.php, /login.php, /api/v1/login, /core/files/js/editor.js` |
-| 7 | Από ποια χώρα έρχονται οι περισσότερες επιθέσεις; (3pt) | China |
-| 8 | Ποια ώρα της ημέρας έγιναν οι περισσότερες επιθέσεις; (2pt) | 20:00 - 21:00 GMT+2 |
+![Αναμνηστική κούπα](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/mug.jpg "Η αναμνηστική μας κούπα")
 
-### Γ. UI - Visualisation (18pt)
-| No | Ερώτηση | Απάντηση |
-|-----| ------- | -------- |
-| 9 | Οπτικοποιήστε τον αριθμό των server requests ανά 1 hr σε γράφημα (Requests per Hour) (2pt) | |
-| 10 | Οπτικοποιήστε το σύνολο των server requests ανά χώρα σε γράφημα τύπου πίτα (Total Requests per Country) (5pt) | |
-| 11 | Αποτυπώστε την προέλευση των attack requests ανά ώρα σε ένα παγκόσμιο χάρτη (8pt) | |
+Την πρώτη θέση κατέλαβε η ομάδα Wannabe Programmers, με δύο μέλη από το ΑΠΘ και το ΠΑΜΑΚ.
+![1η θέση](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/winners1.jpg "Η νικήτρια ομάδα")
 
-### Δ. Bonus (10pt)
-| No | Ερώτηση | Απάντηση |
-|-----| ------- | -------- |
-| 12 | Ποια IP κατά την γνώμη σας είναι η πιο επικίνδυνη για τον server; Για ποιο λόγο; (10pt) | 62.109.16.162 |
+Με πολύ μικρή διαφορά (1 πόντο), δεύτερη ήρθε η ομάδα Πύθωνες, με τέσσερα μέλη, όλα από το ΤΕΙ Κεντρικής Μακεδονίας
+![2η θέση](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/winners2.jpg "Οι αργυροί νικητές")
 
-### Ε. Extra Bonus (10pt)
-Εάν έχετε στην υλοποίηση σας **Clustering** παίρνετε επιπλέον bonus 10pt.
+Τρίτη ήρθε η ομάδα HACKBANG, με τέσσερα μέλη, από το ΠΑΜΑΚ
+![3η θέση](https://github.com/serrestech/hackathon/blob/2019-after-post/photos/winners3.jpg "Οι τρίτοι νικητές")
 
-## Log files
-| Download here: [Server logs for whole day of May 19 2019](https://github.com/serrestech/hackathon/raw/topic/daily-logs.zip)
+Τα πλήρη και αναλυτικά αποτελέσματα [είναι διαθέσιμα online](https://github.com/serrestech/hackathon/tree/topic/results).
 
-## Παράρτημα
-- Apache2, Common Log Format: https://httpd.apache.org/docs/2.4/logs.html
-- Λέξεις κλειδιά: logging, monitoring, log filtering, log visualization, GeoIP, server http attacks, data aggregation, mapping, regex patterns, GNU zip (gzip), log rotate
-- Most common HTTP request codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-- List of UserAgentStrings: http://www.useragentstring.com/pages/useragentstring.php
-- Server attack types & patterns (DDOS, Bruteforcing, XSS, SQL Injection, XSRF, Remote File Inclusion)
-- Server hack types (Url misinterpretation, directory browsing, get “non-web” files, reverse proxying, java decompilation, source code disclosure, input validation, SQL query poisoning, Session Hijacking, Buffer overflows)
+Την διοργάνωση υποστήριξαν η UNESCO Σερρών (Club UNESCO for Serres), πλήθος τοπικών και όχι μόνο εταιρειών, φορέων, μέσων μαζικής ενημέρωσης και εθελοντών. Τους ευχαριστούμε θερμά όλους για την υλική και έμπρακτη συμπαράσταση τους. Μια πλήρης λίστα όλων των χορηγών βρίσκεται στην [επίσημη σελίδα του hackathon](http://hackathon.serrestech.gr).
+
+Σύμφωνα με τις δηλώσεις των συμμετεχόντων, το σημαντικότερο όφελος από την συμμετοχή τους στο Hackathon ήταν η αποκόμιση πλούσιας εμπειρίας αλλά και η επαφή με τους χορηγούς. Οι περισσότερες από τις ομάδες δήλωσαν ότι θα ήθελαν να πάρουν μέρος και την επόμενη χρονιά.
+
+Στη διάρκεια της εκδήλωσης επίσης υπήρξαν διάφοροι διαγωνισμοί, και κληρώθηκαν στους νικητές εισιτήρια συμμετοχής σε συνέδρια καθώς και αναμνηστικά δώρα. Ευχαριστούμε όλο τον κόσμο και τον καλούμε για να ενημερώνετε για τις δράσεις μας να γίνει μέλος στην κοινότητα δηλώνοντας συμμετοχή στο [Σερραϊκό μας meetup](https://www.meetup.com/Serrai-Software-Development-Meetup/) ή στη [σελίδα μας στο Facebook](https://www.facebook.com/SerresTech/)
+
